@@ -17,11 +17,22 @@ page_bg_img = f'''
         background-image: url("data:image/png;base64,{bg_image_base64}");
         background-size: cover;
     }}
+    .content-container {{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+        overflow-y: auto;
+    }}
 </style>
 '''
 
 # Inject the CSS into the app
 st.markdown(page_bg_img, unsafe_allow_html=True)
+st.markdown('<div class="content-container">', unsafe_allow_html=True)
+
 
 st.header("Your Emotion Based Playlist")
 
