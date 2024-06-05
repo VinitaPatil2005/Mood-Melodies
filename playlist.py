@@ -30,7 +30,7 @@ query_params = st.experimental_get_query_params()
 mood = query_params.get("mood", [None])[0]
 
 if mood:
-    st.success(f"Feeling {mood} !")
+    st.header(f"Feeling {mood} !")
     st.success(f"Here are some {mood} songs for you")
     song_list = os.listdir(f"./song/{mood}/")
     str_song_path = f"./song/{mood}/"
