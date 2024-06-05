@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 import os
 
 # Load and encode the background image
